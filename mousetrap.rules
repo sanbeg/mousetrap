@@ -1,0 +1,5 @@
+#/etc/udev/rules.d
+ACTION=="add", ATTR{name}=="USB Optical Mouse" , RUN+="/usr/local/bin/mousetrap -d"
+#ACTION=="add", ATTR{name}=="USB Optical Mouse" , RUN+="/bin/sh -c 'echo hello mouse>>/tmp/mouse.log'"
+ACTION=="change", ATTR{name}=="USB Optical Mouse", RUN+="/usr/local/bin/mousetrap -e"
+
